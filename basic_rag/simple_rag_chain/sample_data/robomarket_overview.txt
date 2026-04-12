@@ -1,0 +1,95 @@
+RoboMarket Platform Overview
+============================
+
+RoboMarket is an AI-powered B2B marketplace that connects buyers and sellers of industrial
+robots, collaborative robots (cobots), robotic components, and automation systems. The
+platform serves manufacturers, system integrators, distributors, and research institutions
+across North America, Europe, and Asia-Pacific.
+
+Key Platform Features
+---------------------
+
+1. Intelligent Product Catalog
+   The catalog contains over 50,000 SKUs spanning six main categories:
+   - Industrial robots (6-axis, SCARA, delta, Cartesian)
+   - Collaborative robots (cobots) rated for human-robot interaction
+   - End-of-arm tooling (grippers, welding torches, vision systems)
+   - Motion controllers and servo drives
+   - Safety systems (light curtains, safety PLCs, force-torque sensors)
+   - Spare parts and consumables
+
+2. AI-Assisted Sourcing
+   Buyers submit a specification sheet or natural-language description of their
+   automation task. The platform's RAG-powered sourcing engine matches requirements to
+   products, retrieves relevant technical datasheets, and generates a ranked shortlist
+   with justification drawn directly from supplier documentation.
+
+3. Supplier Verification
+   All suppliers undergo a three-stage verification: legal entity check, product
+   authenticity audit, and reference customer validation. Verified suppliers receive a
+   trust badge visible on their storefront.
+
+4. RFQ and Negotiation Workflow
+   Qualified buyers can send Requests for Quotation (RFQs) directly through the platform.
+   AI-drafted RFQ templates pre-fill technical requirements extracted from the product
+   catalog. Suppliers respond within 72 hours or lose prioritization in search rankings.
+
+5. Integration APIs
+   RoboMarket exposes REST and GraphQL APIs for:
+   - Product catalog search and filtering
+   - Real-time inventory and lead-time data
+   - Order management and shipment tracking
+   - Supplier rating and review aggregation
+
+Supported Robot Brands
+-----------------------
+The marketplace carries products from all major robotics OEMs including:
+FANUC, KUKA, ABB, Yaskawa, Universal Robots, AUBO, Doosan, Techman Robot,
+Franka Emika, and over 200 additional regional and niche manufacturers.
+
+Market Segments
+---------------
+- Automotive manufacturing (welding, painting, assembly)
+- Electronics and semiconductor assembly
+- Food and beverage packaging
+- Pharmaceutical and medical device manufacturing
+- Logistics and warehouse automation (AMRs, picking systems)
+- Aerospace and defense component machining
+
+Pricing Model
+-------------
+RoboMarket operates on a transaction-fee model. Buyers pay no subscription fee.
+Suppliers pay a tiered listing fee based on catalog size and a 1.5–3.5% transaction
+fee on completed orders. Enterprise buyers with annual spend above $1M USD qualify
+for negotiated platform rates and dedicated account management.
+
+Data and Privacy
+----------------
+All transactional data is encrypted at rest (AES-256) and in transit (TLS 1.3).
+RoboMarket does not sell supplier or buyer data to third parties. Aggregated,
+anonymized market intelligence reports are available to premium subscribers.
+
+Support and SLA
+---------------
+Platform uptime SLA is 99.9% (three nines). Technical support is available 24/7
+for enterprise accounts and during business hours (UTC 08:00–20:00) for standard
+accounts. Dedicated implementation engineers are assigned to deployments exceeding
+$500K in projected annual transaction volume.
+
+Roadmap Highlights (next 12 months)
+------------------------------------
+- Launch of a predictive lead-time engine trained on historical supplier fulfillment data
+- Computer-vision powered part identification from photos (no part number required)
+- Integration with major ERP systems (SAP, Oracle, Microsoft Dynamics)
+- Expansion into Southeast Asian markets: Vietnam, Thailand, and Indonesia
+- Multi-currency checkout supporting EUR, GBP, JPY, CNY, and INR in addition to USD
+
+Glossary
+--------
+AMR         Autonomous Mobile Robot
+BOM         Bill of Materials
+EOAT        End-of-Arm Tooling
+OEM         Original Equipment Manufacturer
+RFQ         Request for Quotation
+SCARA       Selective Compliance Articulated Robot Arm
+SKU         Stock Keeping Unit
