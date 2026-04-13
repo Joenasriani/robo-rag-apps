@@ -1,0 +1,88 @@
+RoboMarket API Documentation Excerpts
+======================================
+
+## Overview
+The RoboMarket Platform API (v2) provides programmatic access to product listings, orders, inventory, and supplier data. All endpoints use HTTPS and require OAuth 2.0 bearer tokens.
+
+Base URL: https://api.robomarket.io/v2
+
+## Authentication
+Obtain an access token via the OAuth 2.0 client credentials flow:
+
+POST https://auth.robomarket.io/oauth/token
+Content-Type: application/x-www-form-urlencoded
+grant_type=client_credentials&client_id=YOUR_CLIENT_ID&client_secret=YOUR_CLIENT_SECRET
+
+Tokens expire after 3600 seconds. Include in all requests:
+Authorization: Bearer <access_token>
+
+## Rate Limits
+- Standard plans: 1,000 requests/minute, 100,000 requests/day
+- Professional plans: 5,000 requests/minute, 1,000,000 requests/day
+- Enterprise plans: 10,000 requests/minute, unlimited daily
+Rate limit headers returned: X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset
+
+## Products API
+
+### List Products
+GET /products
+Parameters: category (string), brand (string), min_price (number), max_price (number), in_stock (boolean), page (integer, default 1), per_page (integer, default 20, max 100)
+Response: { "data": [ Product ], "meta": { "total": 50000, "page": 1, "per_page": 20 } }
+
+### Get Product
+GET /products/{sku}
+Returns full product details including specifications, pricing, stock levels, and supplier info.
+
+### Product Schema
+{ "sku": "string", "name": "string", "brand": "string", "category": "string", "price_usd": number, "stock_qty": integer, "lead_time_days": integer, "certifications": ["string"], "specs": {} }
+
+## Orders API
+
+### Create Order
+POST /orders
+Body: { "items": [ { "sku": "string", "qty": integer } ], "shipping_address": {}, "payment_method": "wire_transfer|letter_of_credit|escrow|credit_card" }
+Returns order ID and estimated delivery date.
+
+### Get Order
+GET /orders/{order_id}
+Returns order status: pending, confirmed, shipped, delivered, cancelled.
+
+### Order Webhooks
+Subscribe to order events via POST /webhooks. Events: order.confirmed, order.shipped, order.delivered, order.cancelled.
+
+## Inventory API
+
+### Check Stock
+GET /inventory/{sku}
+Returns real-time stock level and next restock date.
+
+### Bulk Stock Check
+POST /inventory/bulk
+Body: { "skus": ["string"] }
+Returns array of { sku, qty_available, lead_time_days }.
+
+## Supplier API
+
+### List Suppliers
+GET /suppliers
+Filter by category, country, certification.
+
+### Supplier Profile
+GET /suppliers/{supplier_id}
+Returns verification status, product count, average rating, response time.
+
+## Error Codes
+400 Bad Request — Invalid parameters. Check error.details for field-level validation messages.
+401 Unauthorized — Token missing or expired. Re-authenticate.
+403 Forbidden — Insufficient permissions for the requested resource.
+404 Not Found — Resource does not exist.
+429 Too Many Requests — Rate limit exceeded. Retry after X-RateLimit-Reset timestamp.
+500 Internal Server Error — Contact support if this persists.
+
+## SDKs
+Official SDKs available: Python (pip install robomarket-sdk), JavaScript/TypeScript (npm install @robomarket/sdk), Java (Maven: io.robomarket:sdk:2.1.0).
+
+## Changelog (v2)
+- v2.1.0: Added bulk inventory endpoint, webhook subscriptions, GraphQL beta
+- v2.0.0: Breaking change from v1 — OAuth 2.0 replaces API keys, new pagination format
+- v1.9.x: Deprecated, end-of-life 2025-12-31

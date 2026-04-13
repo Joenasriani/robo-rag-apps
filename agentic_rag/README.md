@@ -1,7 +1,9 @@
 # agentic_rag
 
-This tier is planned and not implemented yet.
+Apps in this tier demonstrate agent-driven RAG patterns where a language model autonomously decides when and how to invoke retrieval tools.
 
-## Known limitations
+## Apps
 
-- No apps implemented in this tier yet.
+| App | Description | Status |
+|-----|-------------|--------|
+| [tool_use_rag](tool_use_rag/) | ReAct agent with a retrieval tool — iterates until it has sufficient context | ✅ Ready |

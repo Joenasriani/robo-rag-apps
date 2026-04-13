@@ -1,7 +1,9 @@
 # rag_as_a_service
 
-This tier is planned and not implemented yet.
+Apps in this tier expose the RAG pipeline as a REST API so any client can index documents and query them over HTTP.
 
-## Known limitations
+## Apps
 
-- No apps implemented in this tier yet.
+| App | Description | Status |
+|-----|-------------|--------|
+| [api_service](api_service/) | FastAPI service with `/index` and `/query` endpoints, OpenAI embeddings + Chroma | ✅ Ready |

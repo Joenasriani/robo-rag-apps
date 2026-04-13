@@ -8,20 +8,35 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    strategy:
+      fail-fast: false
+      matrix:
+        app:
+          - path: basic_rag/simple_rag_chain
+            name: simple_rag_chain
+          - path: agentic_rag/tool_use_rag
+            name: tool_use_rag
+          - path: local_rag/ollama_rag
+            name: ollama_rag
+          - path: rag_as_a_service/api_service
+            name: api_service
+
+    name: "pytest — ${{ matrix.app.name }}"
+
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Python 3.11
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
-        python-version: 3.11
+        python-version: "3.11"
 
-    - name: Install dependencies
+    - name: Install dependencies (${{ matrix.app.name }})
       run: |
-        pip install -r basic_rag/simple_rag_chain/requirements.txt
-        pip install pytest
+        pip install -r ${{ matrix.app.path }}/requirements.txt
+        pip install pytest pytest-asyncio
 
-    - name: Run tests
+    - name: Run tests (${{ matrix.app.name }})
       run: |
-        pytest -q basic_rag/simple_rag_chain/tests
+        pytest -q ${{ matrix.app.path }}/tests

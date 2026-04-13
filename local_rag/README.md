@@ -1,7 +1,10 @@
 # local_rag
 
-This tier is planned and not implemented yet.
+Apps in this tier run entirely on your local machine — no cloud API keys required. Embeddings and LLM inference are handled by Ollama.
 
-## Known limitations
+## Apps
 
-- No apps implemented in this tier yet.
+| App | Description | Status |
+|-----|-------------|--------|
+| [ollama_rag](ollama_rag/) | Ollama embeddings + Ollama LLM + Chroma — fully local RAG | ✅ Ready |
+
