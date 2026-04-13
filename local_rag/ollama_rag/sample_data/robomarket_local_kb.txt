@@ -1,0 +1,84 @@
+RoboMarket Local Knowledge Base — Automation & Robotics Reference
+==================================================================
+
+## Section 1: Industrial Robot Categories
+
+### 1.1 Articulated Robots
+Articulated robots are the most common type of industrial robot. They feature rotary joints (typically 4 to 6 axes) and can perform complex, multi-directional movements. Common applications include welding, painting, assembly, and material handling. Leading manufacturers include FANUC, KUKA, ABB, and Yaskawa Motoman.
+
+Payload capacity ranges from 0.5 kg (small assembly) to 2,300 kg (heavy palletizing). Repeatability values for high-end models reach ±0.01 mm. Reach spans from 300 mm to over 4,000 mm.
+
+### 1.2 SCARA Robots
+SCARA (Selective Compliance Articulated Robot Arm) robots have 4 axes and excel at fast pick-and-place and assembly tasks in a horizontal plane. They are faster and stiffer than articulated robots for these applications. Typical payloads: 1–20 kg. Cycle time: 0.3–0.5 seconds for standard pick-and-place.
+
+### 1.3 Delta Robots
+Delta robots use three parallel arms connected to a common base. They are the fastest robot type, achieving up to 150 picks per minute. Primary use: high-speed packaging, sorting, and food processing. Payload: typically 1–15 kg. Limited workspace (within the sphere defined by arm length).
+
+### 1.4 Collaborative Robots (Cobots)
+Cobots are designed to work alongside humans without traditional safety cages. They incorporate force/torque sensing to detect contact and stop immediately. ISO/TS 15066 defines four modes of human-robot collaboration: safety-rated monitored stop, hand guiding, speed and separation monitoring, and power and force limiting. Major cobot brands: Universal Robots, FANUC CRX, ABB YuMi, KUKA iiwa, Doosan, Techman.
+
+---
+
+## Section 2: Key Performance Metrics
+
+### 2.1 Repeatability vs. Accuracy
+- **Repeatability**: How consistently a robot returns to the same programmed point. Measured as ±X mm (ISO 9283). World-class: ±0.01 mm.
+- **Accuracy**: How closely the robot reaches a commanded Cartesian position. Less critical in most industrial applications where programs are taught by demonstration.
+
+### 2.2 Payload
+The maximum load the robot can carry at its wrist, including any end-of-arm tooling (EOAT). Always budget 20–30% headroom below the rated payload for dynamic loads and safety margin.
+
+### 2.3 Reach
+The maximum radial distance from the robot's base to the tool centre point (TCP). Check both maximum reach and minimum reach (dead zone near the base).
+
+### 2.4 Cycle Time
+Total time for one complete operation cycle. Influenced by payload, speed limits (especially near singularities), acceleration, and path complexity.
+
+---
+
+## Section 3: Integration Standards
+
+### 3.1 Communication Protocols
+- **EtherNet/IP**: Common in North America, especially with Allen-Bradley PLCs.
+- **PROFINET**: Dominant in European Siemens-based environments.
+- **Modbus TCP**: Simple, legacy-compatible, widely supported.
+- **OPC UA**: Modern, platform-independent, supports complex data structures. Recommended for Industry 4.0 and IIoT integrations.
+
+### 3.2 Robot Programming Languages
+- **KRL (KUKA Robot Language)**: C-like syntax, runs on KRC controllers.
+- **RAPID (ABB)**: Structured text, supports multitasking.
+- **KAREL (FANUC)**: Pascal-based, supports user programs and macros.
+- **URScript (Universal Robots)**: Python-like, easy to learn for cobots.
+
+### 3.3 Simulation and Digital Twin
+Common simulation platforms: RoboDK, Siemens Process Simulate, ABB RobotStudio, FANUC ROBOGUIDE, KUKA.Sim. Digital twin adoption reduces commissioning time by 30–50% on average.
+
+---
+
+## Section 4: Safety Standards
+
+### 4.1 Applicable Standards
+- **ISO 10218-1:2011**: Safety requirements for industrial robots (robot design).
+- **ISO 10218-2:2011**: Safety requirements for industrial robots (integration and installation).
+- **ISO/TS 15066:2016**: Collaborative robots — safety requirements.
+- **EN ISO 13849-1**: Safety-related parts of control systems (Performance Levels PL a–e).
+- **IEC 62061**: Functional safety of machinery — SIL (Safety Integrity Level) determination.
+
+### 4.2 Risk Assessment
+Every robot installation requires a documented risk assessment per ISO 12100. Steps: (1) determine limits of the machine, (2) identify hazards, (3) estimate risk, (4) evaluate risk, (5) reduce risk. Residual risk must be documented and communicated to the end user.
+
+---
+
+## Section 5: RoboMarket Platform Features
+
+### 5.1 Supplier Onboarding
+New suppliers submit an application including: company registration documents, product catalogue, authorised distributor certificates (if applicable), reference customers (minimum three), and insurance certificate (minimum €5M product liability). Processing time: 10–15 business days.
+
+### 5.2 Buyer Features
+- AI-powered product recommendation engine (updated daily).
+- Configurable RFQ (Request for Quotation) workflow.
+- Order tracking with real-time carrier integration (DHL, FedEx, DB Schenker, Kuehne+Nagel).
+- Invoicing and VAT management for 27 EU countries plus UK, US, Canada, Japan, and Australia.
+
+### 5.3 Analytics Dashboard
+Buyers with Professional and Enterprise plans have access to spend analytics, supplier performance scorecards, and market pricing benchmarks updated weekly from anonymised transaction data.

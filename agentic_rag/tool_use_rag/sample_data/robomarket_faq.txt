@@ -1,0 +1,47 @@
+RoboMarket FAQ — Frequently Asked Questions
+===========================================
+
+Q: What is RoboMarket?
+A: RoboMarket is a B2B marketplace that connects buyers and sellers of industrial robots, cobots, and automation components. It serves over 5,000 verified suppliers and 20,000 active buyers across 42 countries.
+
+Q: Which robot brands are available on RoboMarket?
+A: RoboMarket stocks products from FANUC, KUKA, ABB, Yaskawa Motoman, Universal Robots, Doosan Robotics, Techman Robot, OMRON, Denso Robotics, and Kawasaki Robotics. New brands are added quarterly after passing our supplier onboarding process.
+
+Q: How does the supplier verification process work?
+A: Suppliers must pass a three-stage verification: (1) legal entity check — validates business registration and tax ID in their country of incorporation; (2) product authenticity audit — requires factory inspection or authorized distributor certificate; (3) reference customer validation — three verified purchase references from existing customers.
+
+Q: What transaction fees does RoboMarket charge?
+A: RoboMarket charges a tiered transaction fee: 3.5% for orders under $50,000; 2.5% for orders between $50,000 and $200,000; 1.5% for orders above $200,000. Buyers with annual platform spend exceeding $1M qualify for a negotiated enterprise rate.
+
+Q: What product categories are listed on RoboMarket?
+A: Six product categories are available: (1) Industrial Arms — 6-axis and SCARA robots; (2) Collaborative Robots — force-limited cobots for human-robot collaboration; (3) Mobile Robots — AMRs and AGVs; (4) End-of-Arm Tooling — grippers, sensors, and tool changers; (5) Controllers and Software — robot controllers, simulation software, and SDKs; (6) Spare Parts and Consumables — cables, drive units, and maintenance kits.
+
+Q: Does RoboMarket offer integration APIs?
+A: Yes. RoboMarket provides a REST API and a GraphQL API for programmatic access to product listings, order management, and inventory data. Both APIs support OAuth 2.0 authentication. Rate limits are 1,000 requests per minute for standard plans and 10,000 per minute for enterprise plans.
+
+Q: How does RoboMarket handle disputes between buyers and sellers?
+A: RoboMarket operates a structured dispute resolution process. Buyers have 14 business days after delivery to raise a dispute through the platform portal. A dedicated Resolution Specialist is assigned within 24 hours. If the dispute is not resolved between parties in 10 business days, RoboMarket arbitrates and issues a binding decision.
+
+Q: What payment methods are accepted?
+A: RoboMarket accepts wire transfers, letters of credit (LC), and the RoboMarket Escrow Service. Credit card payments are available for orders under $25,000. Cryptocurrency payments are not currently supported.
+
+Q: What is the average time-to-ship for orders?
+A: In-stock items typically ship within 3 to 5 business days. Custom-configured robots or large batches require 4 to 12 weeks depending on the manufacturer's lead time. Express shipping is available for select in-stock items at an additional surcharge.
+
+Q: Is RoboMarket available in multiple languages?
+A: The platform is fully available in English, German, Mandarin Chinese, Japanese, and Spanish. Partial support (product listings and checkout only) exists for French, Korean, and Portuguese.
+
+Q: How do I contact RoboMarket support?
+A: Support is available 24/7 via live chat on the platform. Email support (support@robomarket.io) has a guaranteed response time of 4 business hours. Phone support is available for enterprise customers Monday through Friday, 08:00–18:00 CET.
+
+Q: What certifications does RoboMarket require from suppliers?
+A: All listed products must carry at minimum ISO 10218-1 (industrial robots safety) or ISO/TS 15066 (collaborative robots). CE marking is required for products sold into the European Union. Additional certifications such as UL, CSA, and KCs are required for the respective markets.
+
+Q: How does RoboMarket protect buyer data?
+A: RoboMarket is SOC 2 Type II certified and GDPR compliant. Data is encrypted at rest (AES-256) and in transit (TLS 1.3). Buyer purchase history is retained for 7 years per financial compliance requirements. Users may request data deletion subject to applicable legal holds.
+
+Q: Can I request a custom quote for large orders?
+A: Yes. For orders above $500,000 or requiring more than 50 units of a single SKU, buyers can submit a Request for Quotation (RFQ) through the platform. RFQs are typically responded to within 2 business days by qualified suppliers.
+
+Q: What is RoboMarket's return policy?
+A: New, uninstalled equipment may be returned within 30 days of delivery for a full refund minus a 5% restocking fee. Used or installed equipment is non-returnable unless defective. Warranty claims are handled directly by the manufacturer; RoboMarket facilitates the process at no additional charge.
