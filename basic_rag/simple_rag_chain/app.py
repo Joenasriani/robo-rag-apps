@@ -40,7 +40,7 @@ _defaults: dict = {
     "status": "idle",
     "status_msg": "Ready",
     "store": None,
-    "store_id": Config.__dict__.get("DEFAULT_STORE_ID", "simple_rag_default"),
+    "store_id": getattr(Config, "DEFAULT_STORE_ID", "simple_rag_default"),
     "answer": None,
     "error": None,
     "chunks_indexed": 0,

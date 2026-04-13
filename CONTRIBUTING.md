@@ -114,8 +114,24 @@ Every app must include:
 - `tests/test_ingestion.py` — validates real file ingestion produces chunks with correct metadata.
 - `tests/test_retrieval.py` — builds a temporary vector store, indexes test documents, and asserts that a query returns relevant, non-empty results.
 
-Tests must pass without requiring external API keys (mock or skip API-dependent steps).  
-Run tests from the app folder: `pytest tests/`
+Tests must pass without requiring external API keys (mock or skip API-dependent steps).
+
+Run tests **per-app** from the repo root (this is also what CI does):
+```bash
+pytest -q basic_rag/simple_rag_chain/tests
+pytest -q agentic_rag/tool_use_rag/tests
+pytest -q local_rag/ollama_rag/tests
+pytest -q rag_as_a_service/api_service/tests
+```
+
+Or from within the app folder:
+```bash
+cd basic_rag/simple_rag_chain && pytest tests/
+```
+
+> **Note:** Running `pytest` from the repo root without specifying a path will fail.
+> All apps share identical internal package names (`ingestion/`, `retrieval/`, `generation/`), which clash in a single Python process.
+> Always run tests one app at a time.
 
 ---
 
