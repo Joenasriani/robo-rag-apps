@@ -1,7 +1,7 @@
 # robo-rag-apps
 
-> A curated library of production-grade RAG applications focused on the RoboMarket domain.
-> Every app ingests real data, embeds with a real model, stores in a real vector DB, retrieves real chunks, and generates grounded answers — no placeholders, no mocks.
+> A curated library of implemented RAG reference applications focused on the RoboMarket domain.
+> Every app marked **Ready** in the catalog below ingests real data, embeds with a real model, stores in a real vector DB, retrieves real chunks, and generates grounded answers. Planned tiers are explicitly identified and are not included in that implementation claim.
 
 ---
 
@@ -13,7 +13,7 @@
 
 ## How it is organized
 
-Apps are grouped by RAG complexity tier. Every app lives in its own folder with its own `requirements.txt`, `.env.example`, and `README.md`.
+Apps are grouped by RAG complexity tier. Every implemented app lives in its own folder with its own `requirements.txt`, `.env.example`, and `README.md`.
 
 ### Current repo structure (implemented)
 
@@ -90,8 +90,8 @@ python app.py
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the full global standard every app in this repo must meet.
 
 **Key rules at a glance:**
-- Every app must ingest real data, embed with a real model, and store in a real persistent vector DB.
-- No placeholder functions, mocked retrieval, or fake citations — ever.
-- Each app must run independently via `pip install -r requirements.txt && python app.py` (or `streamlit run app.py`).
-- All apps share the design system defined in `shared/ui/`. Never reinvent it.
+- Every app marked Ready must ingest real data, embed with a real model, and store in a real persistent vector DB.
+- No placeholder functions, mocked retrieval, or fake citations in apps marked Ready.
+- Each Ready app must run independently via `pip install -r requirements.txt && python app.py` (or `streamlit run app.py`).
+- All implemented apps share the design system defined in `shared/ui/`. Never reinvent it.
 - PRs without passing tests will not be merged.
